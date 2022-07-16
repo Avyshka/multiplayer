@@ -1,6 +1,7 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Aivagames.multiplayer
@@ -12,6 +13,7 @@ namespace Aivagames.multiplayer
         [SerializeField] private Button _backButton;
         [SerializeField] private Canvas _optionsCanvas;
         [SerializeField] private Canvas _currentCanvas;
+        [SerializeField] protected LoadingScreen _loadingCanvas;
 
         protected string _userName;
         protected string _password;
@@ -33,6 +35,18 @@ namespace Aivagames.multiplayer
             _userNameField.onValueChanged.RemoveAllListeners();
             _passwordField.onValueChanged.RemoveAllListeners();
             _backButton.onClick.RemoveAllListeners();
+        }
+
+        protected virtual void ChangeEnabledUI(bool value)
+        {
+            _userNameField.enabled = value;
+            _passwordField.enabled = value;
+            _backButton.enabled = value;
+        }
+
+        protected void EnterInLobbyScene()
+        {
+            SceneManager.LoadScene(1);
         }
 
         private void OnUserNameChanged(string value)

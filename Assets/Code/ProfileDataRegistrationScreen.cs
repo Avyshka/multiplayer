@@ -27,6 +27,13 @@ namespace Aivagames.multiplayer
             _signUpButton.onClick.RemoveAllListeners();
         }
 
+        protected override void ChangeEnabledUI(bool value)
+        {
+            base.ChangeEnabledUI(value);
+            _emailField.enabled = value;
+            _signUpButton.enabled = value;
+        }
+
         private void OnEmailChanged(string value)
         {
             _email = value;
@@ -34,6 +41,8 @@ namespace Aivagames.multiplayer
 
         private void OnSignUpButtonClicked()
         {
+            ChangeEnabledUI(false);
+            _loadingCanvas.Show();
             PlayFabClientAPI.RegisterPlayFabUser(GetUserRequest(), OnRegistrationSuccess, OnRegistrationFailure);
         }
 
@@ -49,11 +58,16 @@ namespace Aivagames.multiplayer
 
         private void OnRegistrationSuccess(RegisterPlayFabUserResult result)
         {
+            ChangeEnabledUI(true);
+            _loadingCanvas.Hide();
+            EnterInLobbyScene();
             Debug.Log($"{result.Username} was registered");
         }
 
         private void OnRegistrationFailure(PlayFabError error)
         {
+            ChangeEnabledUI(true);
+            _loadingCanvas.Hide();
             Debug.LogError(error.ErrorMessage);
         }
     }

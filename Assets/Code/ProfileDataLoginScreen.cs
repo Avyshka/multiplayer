@@ -21,8 +21,16 @@ namespace Aivagames.multiplayer
             _signInButton.onClick.RemoveAllListeners();
         }
 
+        protected override void ChangeEnabledUI(bool value)
+        {
+            base.ChangeEnabledUI(value);
+            _signInButton.enabled = value;
+        }
+
         private void OnSignUpButtonClicked()
         {
+            ChangeEnabledUI(false);
+            _loadingCanvas.Show();
             PlayFabClientAPI.LoginWithPlayFab(GetUserRequest(), OnLoginSuccess, OnLoginFailure);
         }
 
@@ -37,11 +45,16 @@ namespace Aivagames.multiplayer
 
         private void OnLoginSuccess(LoginResult result)
         {
+            ChangeEnabledUI(true);
+            _loadingCanvas.Hide();
+            EnterInLobbyScene();
             Debug.Log($"{_userName} was logged in");
         }
 
         private void OnLoginFailure(PlayFabError error)
         {
+            ChangeEnabledUI(true);
+            _loadingCanvas.Hide();
             Debug.LogError(error.ErrorMessage);
         }
     }
