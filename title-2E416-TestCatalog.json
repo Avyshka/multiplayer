@@ -1,0 +1,191 @@
+{
+  "CatalogVersion": "TestCatalog",
+  "Catalog": [
+    {
+      "ItemId": "Paper Sword",
+      "ItemClass": "Sword",
+      "CatalogVersion": "TestCatalog",
+      "DisplayName": "Paper Sword",
+      "Description": "Simple paper sword",
+      "VirtualCurrencyPrices": {
+        "RM": 199,
+        "TC": 100
+      },
+      "RealCurrencyPrices": null,
+      "Tags": [
+        "\"Weapon\""
+      ],
+      "CustomData": "{\"damage\":\"1\"}",
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "Wood Sword",
+      "ItemClass": "Sword",
+      "CatalogVersion": "TestCatalog",
+      "DisplayName": "Wood Sword",
+      "Description": "Old oak sword",
+      "VirtualCurrencyPrices": {
+        "RM": 299,
+        "TC": 200
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "\"Weapon\""
+      ],
+      "CustomData": "{\"damage\":\"3\"}",
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "Iron Sword",
+      "ItemClass": "Sword",
+      "CatalogVersion": "TestCatalog",
+      "DisplayName": "Iron Sword",
+      "Description": "A strong imperial sword. The main weapon of the Royal Guard",
+      "VirtualCurrencyPrices": {
+        "RM": 599,
+        "TC": 500
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "\"Weapon\""
+      ],
+      "CustomData": "{\"damage\":\"5\"}",
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "Gold Sword",
+      "ItemClass": "Sword",
+      "CatalogVersion": "TestCatalog",
+      "DisplayName": "Gold Sword",
+      "Description": "A rare sword made of precious metals",
+      "VirtualCurrencyPrices": {
+        "RM": 1599,
+        "TC": 1500
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "\"Weapon\""
+      ],
+      "CustomData": "{\"damage\":\"7\"}",
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "Diamond Sword",
+      "ItemClass": "Sword",
+      "CatalogVersion": "TestCatalog",
+      "DisplayName": "Diamond Sword",
+      "Description": "The Legendary Sword of Heroes",
+      "VirtualCurrencyPrices": {
+        "RM": 4999,
+        "TC": 5000
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "\"Weapon\""
+      ],
+      "CustomData": "{\"damage\":\"10\"}",
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "beginners_kit",
+      "ItemClass": null,
+      "CatalogVersion": "TestCatalog",
+      "DisplayName": "Beginner's Kit",
+      "Description": "Beginner's starter kit",
+      "VirtualCurrencyPrices": {
+        "RM": 299
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": 1,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": {
+        "BundledItems": [
+          "Paper Sword"
+        ],
+        "BundledResultTables": [],
+        "BundledVirtualCurrencies": {
+          "TC": 200
+        }
+      },
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    }
+  ],
+  "DropTables": []
+}
