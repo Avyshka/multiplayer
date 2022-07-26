@@ -21,6 +21,7 @@ namespace Aivagames.multiplayer
 
         public event Action OnLeaveRoomRequest;
         public event Action OnCloseRoomRequest;
+        public event Action OnStartMatchRequest;
 
         private void Start()
         {
@@ -75,7 +76,7 @@ namespace Aivagames.multiplayer
 
         private void OnStartMatch()
         {
-            Debug.Log("RoomPopup:OnStartMatch");
+            OnStartMatchRequest?.Invoke();
         }
     }
 }

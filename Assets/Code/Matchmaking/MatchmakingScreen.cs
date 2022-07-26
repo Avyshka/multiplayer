@@ -4,6 +4,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Aivagames.multiplayer
 {
@@ -31,6 +32,7 @@ namespace Aivagames.multiplayer
 
             _room.OnLeaveRoomRequest += OnLeaveRoom;
             _room.OnCloseRoomRequest += OnCloseRoom;
+            _room.OnStartMatchRequest += OnStartMatch;
 
             _loadBalancingClient = new LoadBalancingClient();
             _loadBalancingClient.AddCallbackTarget(this);
@@ -50,6 +52,7 @@ namespace Aivagames.multiplayer
 
             _room.OnLeaveRoomRequest -= OnLeaveRoom;
             _room.OnCloseRoomRequest -= OnCloseRoom;
+            _room.OnStartMatchRequest -= OnStartMatch;
         }
 
         private void Update()
@@ -79,6 +82,11 @@ namespace Aivagames.multiplayer
         {
             _lobby.Hide();
             JoinToRoom(roomName);
+        }
+
+        private void OnStartMatch()
+        {
+            SceneManager.LoadScene("Match");
         }
 
         private void JoinToRoom(string roomName)
